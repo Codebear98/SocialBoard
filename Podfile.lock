@@ -1,0 +1,118 @@
+PODS:
+  - Alamofire (4.8.1)
+  - GoogleMaps (3.0.3):
+    - GoogleMaps/Maps (= 3.0.3)
+  - GoogleMaps/Base (3.0.3)
+  - GoogleMaps/Maps (3.0.3):
+    - GoogleMaps/Base
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
+  - lottie-ios (2.5.3)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Moya/RxSwift (12.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - Nimble (8.0.1)
+  - ObjectMapper (3.4.2)
+  - pop (1.0.12)
+  - Quick (2.0.0)
+  - R.swift (5.0.2):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
+  - Result (4.1.0)
+  - RxAtomic (4.4.2)
+  - RxCocoa (4.4.2):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxOptional (3.6.2):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
+  - Shallows (0.9.0)
+  - SnapKit (4.2.0)
+  - SwiftLint (0.31.0)
+  - SwiftyJSON (4.2.0)
+  - Then (2.4.0)
+  - UIImageViewAlignedSwift (0.6.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - GoogleMaps
+  - IGListKit (~> 3.0)
+  - lottie-ios
+  - Moya (~> 12.0)
+  - Moya/RxSwift (~> 12.0)
+  - Nimble
+  - ObjectMapper
+  - pop (~> 1.0)
+  - Quick
+  - R.swift
+  - RxCocoa
+  - RxOptional
+  - RxSwift
+  - Shallows (~> 0.9.0)
+  - SnapKit
+  - SwiftLint
+  - SwiftyJSON
+  - Then
+  - UIImageViewAlignedSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - GoogleMaps
+    - IGListKit
+    - lottie-ios
+    - Moya
+    - Nimble
+    - ObjectMapper
+    - pop
+    - Quick
+    - R.swift
+    - R.swift.Library
+    - Result
+    - RxAtomic
+    - RxCocoa
+    - RxOptional
+    - RxSwift
+    - Shallows
+    - SnapKit
+    - SwiftLint
+    - SwiftyJSON
+    - Then
+    - UIImageViewAlignedSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
+  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  Shallows: b7d12cd044d1754dd7d57cb7cdec88b5487e3401
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
+  UIImageViewAlignedSwift: 4f35dca94ad7a9d7160b38ea4a27423136248361
+
+PODFILE CHECKSUM: 249d98e9be2ab68faf32c4fc575ca73322e69100
+
+COCOAPODS: 1.5.3
