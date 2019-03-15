@@ -12,6 +12,7 @@
 		F815043022366C5800C2F6DB /* SocialBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815042F22366C5800C2F6DB /* SocialBoardTests.swift */; };
 		F815043B22366C5800C2F6DB /* SocialBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815043A22366C5800C2F6DB /* SocialBoardUITests.swift */; };
 		F815044A2236A44A00C2F6DB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F81504492236A44800C2F6DB /* README.md */; };
+		F86797AF223C0BB80064F145 /* SpamDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86797AE223C0BB80064F145 /* SpamDetector.swift */; };
 		F889002C2236AE8D0004FCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F889002B2236AE8D0004FCDD /* AppDelegate.swift */; };
 		F889003C2236AE960004FCDD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88900302236AE950004FCDD /* Router.swift */; };
 		F889003D2236AE960004FCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88900322236AE950004FCDD /* Assets.xcassets */; };
@@ -20,6 +21,14 @@
 		F88900402236AE960004FCDD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88900392236AE960004FCDD /* HomeViewController.swift */; };
 		F88900422236AEFE0004FCDD /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88900412236AEFE0004FCDD /* Launcher.swift */; };
 		F889004422381B360004FCDD /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F889004322381B360004FCDD /* HomeRouter.swift */; };
+		F88900462238C8C00004FCDD /* SBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88900452238C8C00004FCDD /* SBService.swift */; };
+		F88900482238CCF10004FCDD /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88900472238CCF10004FCDD /* AppConfig.swift */; };
+		F889004A2238CE450004FCDD /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88900492238CE450004FCDD /* Global.swift */; };
+		F889005522390CA80004FCDD /* MessageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F889005422390CA70004FCDD /* MessageClassifier.mlmodel */; };
+		F889005722390CD80004FCDD /* SpamDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F889005622390CD80004FCDD /* SpamDetector.swift */; };
+		F889005A22390D170004FCDD /* words_ordered.txt in Resources */ = {isa = PBXBuildFile; fileRef = F889005822390D170004FCDD /* words_ordered.txt */; };
+		F889005B22390D170004FCDD /* SMSSpamCollection.txt in Resources */ = {isa = PBXBuildFile; fileRef = F889005922390D170004FCDD /* SMSSpamCollection.txt */; };
+		F889005D223972230004FCDD /* SBServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F889005C223972230004FCDD /* SBServiceSpec.swift */; };
 		FDA342E10BF6BDB8167D60AA /* Pods_SocialBoardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1473547D511BB026AF24444 /* Pods_SocialBoardTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +68,7 @@
 		F815043A22366C5800C2F6DB /* SocialBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialBoardUITests.swift; sourceTree = "<group>"; };
 		F815043C22366C5800C2F6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F81504492236A44800C2F6DB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F86797AE223C0BB80064F145 /* SpamDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpamDetector.swift; sourceTree = "<group>"; };
 		F889002B2236AE8D0004FCDD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F88900302236AE950004FCDD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F88900322236AE950004FCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +77,14 @@
 		F88900392236AE960004FCDD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F88900412236AEFE0004FCDD /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		F889004322381B360004FCDD /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		F88900452238C8C00004FCDD /* SBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBService.swift; sourceTree = "<group>"; };
+		F88900472238CCF10004FCDD /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		F88900492238CE450004FCDD /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		F889005422390CA70004FCDD /* MessageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MessageClassifier.mlmodel; sourceTree = "<group>"; };
+		F889005622390CD80004FCDD /* SpamDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpamDetector.swift; sourceTree = "<group>"; };
+		F889005822390D170004FCDD /* words_ordered.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words_ordered.txt; sourceTree = "<group>"; };
+		F889005922390D170004FCDD /* SMSSpamCollection.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SMSSpamCollection.txt; sourceTree = "<group>"; };
+		F889005C223972230004FCDD /* SBServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBServiceSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				F889002B2236AE8D0004FCDD /* AppDelegate.swift */,
+				F88900472238CCF10004FCDD /* AppConfig.swift */,
+				F88900492238CE450004FCDD /* Global.swift */,
+				F889005322390CA70004FCDD /* MachineLearning */,
 				F889002D2236AE950004FCDD /* Networking */,
 				F889002E2236AE950004FCDD /* Reusables */,
 				F88900372236AE960004FCDD /* Sences */,
@@ -160,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				F815042F22366C5800C2F6DB /* SocialBoardTests.swift */,
+				F889005C223972230004FCDD /* SBServiceSpec.swift */,
+				F86797AE223C0BB80064F145 /* SpamDetector.swift */,
 				F815043122366C5800C2F6DB /* Info.plist */,
 			);
 			path = SocialBoardTests;
@@ -177,6 +200,7 @@
 		F889002D2236AE950004FCDD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F88900452238C8C00004FCDD /* SBService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -239,6 +263,17 @@
 			children = (
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		F889005322390CA70004FCDD /* MachineLearning */ = {
+			isa = PBXGroup;
+			children = (
+				F889005922390D170004FCDD /* SMSSpamCollection.txt */,
+				F889005822390D170004FCDD /* words_ordered.txt */,
+				F889005422390CA70004FCDD /* MessageClassifier.mlmodel */,
+				F889005622390CD80004FCDD /* SpamDetector.swift */,
+			);
+			path = MachineLearning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,8 +391,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F889003E2236AE960004FCDD /* LaunchScreen.storyboard in Resources */,
+				F889005B22390D170004FCDD /* SMSSpamCollection.txt in Resources */,
 				F889003D2236AE960004FCDD /* Assets.xcassets in Resources */,
 				F815044A2236A44A00C2F6DB /* README.md in Resources */,
+				F889005A22390D170004FCDD /* words_ordered.txt in Resources */,
 				F889003F2236AE960004FCDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,11 +721,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F889005522390CA80004FCDD /* MessageClassifier.mlmodel in Sources */,
+				F889004A2238CE450004FCDD /* Global.swift in Sources */,
 				F889003C2236AE960004FCDD /* Router.swift in Sources */,
 				F889002C2236AE8D0004FCDD /* AppDelegate.swift in Sources */,
+				F889005722390CD80004FCDD /* SpamDetector.swift in Sources */,
 				F88900402236AE960004FCDD /* HomeViewController.swift in Sources */,
+				F88900482238CCF10004FCDD /* AppConfig.swift in Sources */,
 				F88900422236AEFE0004FCDD /* Launcher.swift in Sources */,
 				F889004422381B360004FCDD /* HomeRouter.swift in Sources */,
+				F88900462238C8C00004FCDD /* SBService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,7 +738,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F889005D223972230004FCDD /* SBServiceSpec.swift in Sources */,
 				F815043022366C5800C2F6DB /* SocialBoardTests.swift in Sources */,
+				F86797AF223C0BB80064F145 /* SpamDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,7 +952,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 87CS7NBF52;
 				INFOPLIST_FILE = SocialBoardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -918,6 +962,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.life.socialboard.SocialBoardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialBoard.app/SocialBoard";
@@ -930,7 +975,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 87CS7NBF52;
 				INFOPLIST_FILE = SocialBoardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -940,6 +985,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.life.socialboard.SocialBoardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialBoard.app/SocialBoard";
