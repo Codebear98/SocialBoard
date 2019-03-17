@@ -12,9 +12,9 @@
 4. Open the project workspace
 5. Build & Run
 
-## The project demostrate
+## The project demostrates
 
-1. How MVVM fits into IGListKit
+1. How does MVVM look like with IGListKit
 2. Implement VM down to cell level
 3. Repo as model
 4. Moya example
