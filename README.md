@@ -11,3 +11,11 @@
 3. Run `pod repo update && pod install`
 4. Open the project workspace
 5. Build & Run
+
+## The project demostrate
+
+1. How MVVM fits into IGListKit
+2. Implement VM down to cell level
+3. Repo as model
+4. Moya example
+5. Lottie example
