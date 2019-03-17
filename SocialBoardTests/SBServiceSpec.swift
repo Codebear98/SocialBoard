@@ -22,22 +22,19 @@ class SBServiceSpec: QuickSpec {
       
       let paging = Paging(page: 2, limit: 2)
       let provider = MoyaProvider<SBService>()
-      let responseValidate = { (result: Result<Response, MoyaError>) -> () in
-        if case let .success(response) = result,
-          let json = (try? response.filterSuccessfulStatusCodes().mapJSON()) {
-          print("result: \(json)")
-          expect(json).toNot(beNil())
-        } else {
-          print("request url: \(result.value?.request?.url?.absoluteString ?? "")")
-          assertionFailure()
-        }
-      }
       
       context("When request latest post") {
         it("should receive response", closure: {
           waitUntil (timeout: 5) { done in
             provider.request(SBService.latestPosts(paging: paging)) { result in
-              responseValidate(result)
+              if case let .success(response) = result,
+                let sbData = try? response.filterSuccessfulStatusCodes().map([SBPost].self) {
+                print("result: \(sbData)")
+                expect(sbData.first?.id).toNot(beNil())
+              } else {
+                print("request url: \(result.value?.request?.url?.absoluteString ?? "")")
+                fail()
+              }
               done()
             }
           }
@@ -46,8 +43,15 @@ class SBServiceSpec: QuickSpec {
       context("When request showAlbum") {
         it("should receive response", closure: {
           waitUntil (timeout: 5) { done in
-            provider.request(SBService.showAlbum(userId: 1)) { result in
-              responseValidate(result)
+            provider.request(SBService.showAlbums(userId: 1)) { result in
+              if case let .success(response) = result,
+                let sbData = try? response.filterSuccessfulStatusCodes().map([SBAlbum].self) {
+                print("result: \(sbData)")
+                expect(sbData.first?.id).toNot(beNil())
+              } else {
+                print("request url: \(result.value?.request?.url?.absoluteString ?? "")")
+                fail()
+              }
               done()
             }
           }
@@ -58,7 +62,14 @@ class SBServiceSpec: QuickSpec {
         it("should receive users data", closure: {
           waitUntil (timeout: 5) { done in
             provider.request(SBService.showUsers(paging: paging)) { result in
-              responseValidate(result)
+              if case let .success(response) = result,
+                let sbData = try? response.filterSuccessfulStatusCodes().map([SBUser].self) {
+                print("result: \(sbData)")
+                expect(sbData.first?.id).toNot(beNil())
+              } else {
+                print("request url: \(result.value?.request?.url?.absoluteString ?? "")")
+                fail()
+              }
               done()
             }
           }
@@ -69,18 +80,32 @@ class SBServiceSpec: QuickSpec {
         it("should receive response", closure: {
           waitUntil (timeout: 5) { done in
             provider.request(SBService.showUser(userId: 1)) { result in
-              responseValidate(result)
+              if case let .success(response) = result,
+                let sbData = try? response.filterSuccessfulStatusCodes().map(SBUser.self) {
+                print("result: \(sbData)")
+                expect(sbData.id).toNot(beNil())
+              } else {
+                print("request url: \(result.value?.request?.url?.absoluteString ?? "")")
+                fail()
+              }
               done()
             }
           }
         })
       }
-
+      
       context("When request showComments") {
         it("should receive response", closure: {
           waitUntil (timeout: 5) { done in
             provider.request(SBService.showComments(postId: 3, paging: paging)) { result in
-              responseValidate(result)
+              if case let .success(response) = result,
+                let sbData = try? response.filterSuccessfulStatusCodes().map([SBComment].self) {
+                print("result: \(sbData)")
+                expect(sbData.first?.id).toNot(beNil())
+              } else {
+                print("request url: \(result.value?.request?.url?.absoluteString ?? "")")
+                fail()
+              }
               done()
             }
           }
@@ -90,7 +115,14 @@ class SBServiceSpec: QuickSpec {
         it("should receive response", closure: {
           waitUntil (timeout: 5) { done in
             provider.request(SBService.showPhotos(albumId: 1, paging: paging)) { result in
-              responseValidate(result)
+              if case let .success(response) = result,
+                let sbData = try? response.filterSuccessfulStatusCodes().map([SBPhoto].self) {
+                print("result: \(sbData)")
+                expect(sbData.first?.id).toNot(beNil())
+              } else {
+                print("request url: \(result.value?.request?.url?.absoluteString ?? "")")
+                fail()
+              }
               done()
             }
           }

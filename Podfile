@@ -2,7 +2,7 @@
 def sharedpods
   pod 'Alamofire'
   pod 'IGListKit', '~> 3.0'
-  pod 'lottie-ios'
+  pod 'lottie-ios', '~> 2.5.3'
   pod 'Moya', '~> 12.0'
   pod 'Moya/RxSwift', '~> 12.0'
   pod 'ObjectMapper'
@@ -15,6 +15,7 @@ def sharedpods
   pod 'Then'
   pod 'UIImageViewAlignedSwift'
   pod 'R.swift'
+  pod 'SDWebImage', '~> 4.0.0'
 
   # Animation
   pod 'pop', '~> 1.0'

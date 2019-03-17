@@ -13,7 +13,8 @@ enum SBService {
   case latestPosts(paging: Paging)
   case showUsers(paging: Paging)
   case showUser(userId: Int)
-  case showAlbum(userId: Int)
+  case showAlbums(userId: Int)
+  case showAllComments(postId: Int)
   case showComments(postId: Int, paging: Paging)
   case showPhotos(albumId: Int, paging: Paging)
 }
@@ -48,9 +49,9 @@ extension SBService: TargetType {
       return "/users"
     case .showUser(let userId):
       return "/users/\(userId)"
-    case .showAlbum(_):
+    case .showAlbums(_):
       return "/albums"
-    case .showComments(_,_):
+    case .showComments(_,_), .showAllComments(_):
       return "/comments"
     case .showPhotos(_,_):
       return "/photos"
@@ -61,7 +62,8 @@ extension SBService: TargetType {
     case .latestPosts(_),
          .showUsers(_),
          .showUser(_),
-         .showAlbum(_),
+         .showAlbums(_),
+         .showAllComments(_),
          .showComments(_,_),
          .showPhotos(_,_):
       return .get
@@ -72,12 +74,14 @@ extension SBService: TargetType {
     case .latestPosts(let paging), .showUsers(let paging):
       // Always sends parameters in URL, regardless of which HTTP method is used
       return .requestParameters(parameters: paging.params(), encoding: URLEncoding.queryString)
-    case .showAlbum(let userId):
+    case .showAlbums(let userId):
       return .requestParameters(parameters: ["userId": userId], encoding: URLEncoding.queryString)
-    case .showComments(let postId):
+    case .showAllComments(let postId):
       return .requestParameters(parameters: ["postId": postId], encoding: URLEncoding.queryString)
-    case .showPhotos(let albumId):
-      return .requestParameters(parameters: ["albumId": albumId], encoding: URLEncoding.queryString)
+    case .showComments(let postId, let paging):
+      return .requestParameters(parameters: ["postId": postId].merging(paging.params()){ (current,_) in current }, encoding: URLEncoding.queryString)
+    case .showPhotos(let albumId, let paging):
+      return .requestParameters(parameters: ["albumId": albumId].merging(paging.params()){ (current,_) in current }, encoding: URLEncoding.queryString)
     default:
       return .requestPlain
     }
